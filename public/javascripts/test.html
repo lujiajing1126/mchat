@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="CheckUtil.js"></script>
+</head>
+<body>
+<script>
+function check()  {
+alert(escape(document.getElementById('text').value));
+var check = new CheckUtil();
+var abc = document.getElementById('text').value;
+check.regExCheckScript(abc,/<[^>]+>/gi,"新增错题列表");
+check.getErrors();
+}
+</script>
+<form>
+<input type="textarea" id="text" />
+<input type="button" value="测试" onclick="check()">
+</form>
+</body>
+</html>

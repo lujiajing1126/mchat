@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>聊天室</title>
+<!-- loading js library files -->
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<!-- loading js files -->
+<script type="text/javascript" src="javascripts/chat.js"></script>
+<!-- loading css lib files -->
+<link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css">
+<!-- loading css -->
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 700px)" href="stylesheets/toolbar.css">
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 700px)" href="stylesheets/common.css">
+<link type="text/css" rel="stylesheet" media="screen and (min-width: 700px)" href="stylesheets/chat.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="phone.css" />
+</head>
+<body>
+  <div id="contain">
+    <div id="content">
+      <div id="content_show">
+        <div id="contents"></div>
+      </div>
+      <div id="content_saying">
+        <div id="fontbar">
+          <div id="fontfamily" class="fontbar">字体</div>
+          <div id="fontcolor" class="fontbar">颜色</div>
+          <div id="isBold" class="fontbar">粗细</div>
+          <div id="isItalic" class="fontbar">倾斜</div>
+        </div>
+        <div id="toolbar">
+          <div class="left_part">
+            <div class="tools" id="font-tools">A</div>
+            <div class="tools" id="smile-tools">表情</div>
+            <div class="tools" id="source-code"><a href="#myModal" role="button" data-toggle="modal">编辑源码</a></div>
+          </div>
+          <div class="right_part">
+            <div class="tools" id="clear">一键清屏</div>
+          </div>
+        </div>
+        <div id="input_content" contenteditable="true"></div>
+        <div id="sayingto">你好 <span id="from"></span> ，你正在对 <span id="to"></span> 说</div>
+        <div id="say">发送</div>
+      </div>
+    </div>
+    <div id="users_online">
+      <div id="usersbar">
+        <div id="user_label">在线用户</div>
+        <div id="users_list">
+          <ul id="list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+</body>
+</html>
